@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Барбершоп Черномор</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/черномор.jpg" alt="Логотип барбершопа" class="logo"> 
+        <h1>Черномор</h1>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="р.html">Главная</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="three.html">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><a href="two.html">Онлайн-запись</a></li>
+                <li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#authModal">Авторизация</button>
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#registerModal">Регистрация</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-text">
+                    <h3>Добро пожаловать в "Черномор" - барбершоп, где мы воплощаем в жизнь ваши желания! У нас вы найдете квалифицированных мастеров, уютную атмосферу и отличный сервис.</h3>
+                    <button class="book-button" data-toggle="modal" data-target="#choiceModal">Записаться</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container">
+                <h2>Услуги</h2>
+                <div class="services-list">
+                    <div class="service">
+                        <h3>Классическая стрижка</h3>
+                        <p>Стрижка с использованием традиционных техник.</p>
+                        <img src="images/стрижки.jpg" alt="Пример стрижки">
+                        <p>Цена: 1500 руб.</p>
+                        <button class="book-button" data-toggle="modal" data-target="#choiceModal">Записаться</button>
+                    </div>
+                    <div class="service">
+                        <h3>Стрижка с укладкой</h3>
+                        <p>Стрижка с использованием современных техник и укладки.</p>
+                        <img src="images/укладки.jpg" alt="Пример стрижки">
+                        <p>Цена: 2000 руб.</p>
+                        <button class="book-button" data-toggle="modal" data-target="#choiceModal">Записаться</button>
+                    </div>
+                    <div class="service">
+                        <h3>Бритье</h3>
+                        <p>Классическое бритье с использованием традиционных средств.</p>
+                        <img src="images/уход.jpg" class="brit" alt="Пример бритья">
+                        <p>Цена: 1000 руб.</p>
+                        <button class="book-button" data-toggle="modal" data-target="#choiceModal">Записаться</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <h2>Галерея. Наше рабочее место.</h2>
+                <div class="gallery-images">
+                    <img src="images/галерея1.jpg" alt="Фото интерьера">
+                    <img src="images/галерея2.jpg" alt="Фото довольного клиента">
+                    <img src="images/галерея3.jpg" alt="Фото интерьера">
+                    <img src="images/галерея4.jpg" alt="Фото довольного клиента">
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2>Контакты:</h2>
+                <img src="images/контакты.jpg" width="200px" height="200px">
+                <div class="contact-info">
+                    <p>Адрес: ул. Приморская, д. 12</p>
+                    <p>Телефон: +7 (999) 123-45-67</p>
+                    <p>Email: barbershop@chernomor.ru</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Черномор</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно выбора авторизации или регистрации -->
+    <div class="modal" id="choiceModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Заголовок -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Выберите действие</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Тело модального окна -->
+                <div class="modal-body">
+                    <p>Пожалуйста, выберите, хотите ли вы войти в свою учетную запись или зарегистрироваться.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#authModal" data-dismiss="modal">Авторизация</button>
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#registerModal" data-dismiss="modal">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для авторизации -->
+    <div class="modal" id="authModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Заголовок -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Авторизация</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Тело модального окна -->
+                <div class="modal-body">
+                    <form id="auth-form">
+                        <div class="form-group">
+                            <label for="auth-email">Email:</label>
+                            <input type="email" class="form-control" id="auth-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="auth-password">Пароль:</label>
+                            <input type="password" class="form-control" id="auth-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для регистрации -->
+    <div class="modal" id="registerModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Заголовок -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Регистрация</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Тело модального окна -->
+                <div class="modal-body">
+                    <form id="register-form">
+                        <div class="form-group">
+                            <label for="reg-email">Email:</label>
+                            <input type="email" class="form-control" id="reg-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-password">Пароль:</label>
+                            <input type="password" class="form-control" id="reg-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
